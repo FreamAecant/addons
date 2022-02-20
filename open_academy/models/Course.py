@@ -11,6 +11,7 @@ class Course(models.Model):
     title = fields.Char(string='Title')
     description = fields.Text(string='Description')
     responsible = fields.Many2one('res.users', ondelete='set null')
+    sessions = fields.One2many('open_academy.session', 'course')
 
 
     # @api.depends('value')
