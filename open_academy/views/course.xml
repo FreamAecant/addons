@@ -18,15 +18,23 @@
             <field name="model">open_academy.course</field>
             <field name="arch" type="xml">
                 <form string = "Courses form">
-                    <group colspan="2" col="2">
-                        <separator string="Course name"/>
-                        <field name="name" />
-                        <!-- <field name="description" /> -->
-                    </group>
+
+                        <group col="2">
+                            <separator string="Course name"/>
+                            <field name="name"/>
+                        </group>
+                        <group col="2">
+                            <separator string="Course title"/>
+                            <field name="title"/>
+                        </group>
+                        <group col="2">
+                            <separator string="Course responsible"/>
+                            <field name="responsible"/>
+                        </group>
+
                     <notebook colspan="2" col="2">
-                        <page string="Course description">                            
-                            <!-- <field name="name" /> -->
-                            <field name="description" />
+                        <page string="Course description">                                                        
+                            <field name="description" />                        
                         </page>
                     </notebook>
                 </form>

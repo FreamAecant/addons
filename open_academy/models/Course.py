@@ -10,6 +10,8 @@ class Course(models.Model):
     name = fields.Char(string='Course')
     title = fields.Char(string='Title')
     description = fields.Text(string='Description')
+    responsible = fields.Many2one('res.users', ondelete='set null')
+
 
     # @api.depends('value')
     # def _value_pc(self):

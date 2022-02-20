@@ -12,3 +12,5 @@ class Course(models.Model):
     startdate = fields.Char(string='Start-date')
     duration = fields.Integer(string='Duration')
     seats = fields.Integer(string='Number of seats')
+    instructor = fields.Many2one('res.partner', ondelete='set null')
+    course = fields.Many2one('open_academy.course', ondelete='set null')
