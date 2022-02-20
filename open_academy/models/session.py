@@ -4,7 +4,7 @@
 from odoo import models, fields, api
 
 
-class Course(models.Model):
+class Session(models.Model):
     _name = 'open_academy.session'
     _description = 'Session module description'
 

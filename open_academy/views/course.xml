@@ -41,6 +41,19 @@
             </field>
         </record>
 
+        <record id="partner_list2" model="ir.ui.view">
+            <field name="name">Inherited partner view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook>
+                    <page string="Datos Heredados">                    
+                        <field name="sessions" />
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
         <record model="ir.actions.act_window" id="action_list_courses">
             <field name="name">Courses</field>
             <field name="res_model">open_academy.course</field>
@@ -51,10 +64,17 @@
             <field name="res_model">open_academy.session</field>
             <field name="view_mode">tree,form</field>
         </record>
+        <record model="ir.actions.act_window" id="action_list_partners">
+            <field name="name">Partners</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
         <menuitem id="menu_open_academy" name="OpenAcademy" sequence="90"/>
         <menuitem id="menu_courses" parent="menu_open_academy" name="Courses" sequence="50"
                 action="action_list_courses"/>
-        <menuitem id="menu_sessions" parent="menu_open_academy" name="Sessions" sequence="50"
+        <menuitem id="menu_sessions" parent="menu_open_academy" name="Sessions" sequence="60"
                 action="action_list_sessions"/>
+        <menuitem id="menu_partners" parent="menu_open_academy" name="Partners" sequence="70"
+                action="action_list_partners"/>
     </data>
 </odoo>
