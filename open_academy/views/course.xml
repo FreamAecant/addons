@@ -1,5 +1,26 @@
 <odoo>
     <data>
+
+        <record id="form_courses" model="ir.ui.view">
+            <field name="name">Course List</field>
+            <field name="model">open_academy.course</field>
+            <field name="arch" type="xml">
+                <form string = "Courses form">
+                    <group colspan="2" col="2">
+                        <separator string="Course name"/>
+                        <field name="name" />
+                        <!-- <field name="description" /> -->
+                    </group>
+                    <notebook colspan="2" col="2">
+                        <page string="Course description">                            
+                            <!-- <field name="name" /> -->
+                            <field name="description" />
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
         <record model="ir.actions.act_window" id="action_list_courses">
             <field name="name">Courses</field>
             <field name="res_model">open_academy.course</field>
@@ -8,5 +29,6 @@
         <menuitem id="menu_open_academy" name="OpenAcademy" sequence="10"/>
         <menuitem id="menu_courses" parent="menu_open_academy" name="Courses" sequence="10"
                 action="action_list_courses"/>
+    
     </data>
 </odoo>
