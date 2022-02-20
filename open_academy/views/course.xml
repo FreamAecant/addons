@@ -38,8 +38,15 @@
             <field name="res_model">open_academy.course</field>
             <field name="view_mode">tree,form</field>
         </record>
+        <record model="ir.actions.act_window" id="action_list_sessions">            
+            <field name="name">Sessions</field>
+            <field name="res_model">open_academy.session</field>
+            <field name="view_mode">tree,form</field>
+        </record>
         <menuitem id="menu_open_academy" name="OpenAcademy" sequence="90"/>
         <menuitem id="menu_courses" parent="menu_open_academy" name="Courses" sequence="50"
                 action="action_list_courses"/>
+        <menuitem id="menu_sessions" parent="menu_open_academy" name="Sessions" sequence="50"
+                action="action_list_sessions"/>
     </data>
 </odoo>
