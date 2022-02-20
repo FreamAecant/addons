@@ -1,6 +1,18 @@
 <odoo>
     <data>
 
+        <record id="course_view_search" model="ir.ui.view">
+            <field name="name">Course search field</field>
+            <field name="model">open_academy.course</field>
+            <field name="arch" type="xml">
+                <search string="Search for a course">
+                    <field name="name" />                    
+                    <field name="title" />
+                    <field name="description" />
+                </search>
+            </field>
+        </record>
+
         <record id="form_courses" model="ir.ui.view">
             <field name="name">Course List</field>
             <field name="model">open_academy.course</field>
@@ -26,9 +38,8 @@
             <field name="res_model">open_academy.course</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem id="menu_open_academy" name="OpenAcademy" sequence="10"/>
-        <menuitem id="menu_courses" parent="menu_open_academy" name="Courses" sequence="10"
+        <menuitem id="menu_open_academy" name="OpenAcademy" sequence="90"/>
+        <menuitem id="menu_courses" parent="menu_open_academy" name="Courses" sequence="50"
                 action="action_list_courses"/>
-    
     </data>
 </odoo>
