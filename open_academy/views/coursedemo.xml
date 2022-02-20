@@ -1,17 +1,19 @@
 <odoo>
-    <record model="open_academy.Course" id="demoCourse1">
-        <field name="name">Curso de demostración 1</field>
-        <field name="title">Primer Curso</field>
-        <field name="description">Este es el primer Curso</field>
-    </record>
-    <record model="open_academy.Course" id="demoCourse2">
-        <field name="name">Curso de demostración 2</field>
-        <field name="title">Segundo Curso</field>
-        <field name="description">Este es el segundo Curso</field>
-    </record>
-    <record model="open_academy.Course" id="demoCourse3">
-        <field name="name">Curso de demostración 3</field>
-        <field name="title">Tercer Curso</field>
-        <field name="description">Este es el tercer Curso</field>
-    </record>
+    <data>
+        <record model="open_academy.Course" id="demoCourse1">
+            <field name="name">Curso de demostración 1</field>
+            <field name="title">Primer Curso</field>
+            <field name="description">Este es el primer Curso</field>
+        </record>
+        <record model="open_academy.Course" id="demoCourse2">
+            <field name="name">Curso de demostración 2</field>
+            <field name="title">Segundo Curso</field>
+            <field name="description">Este es el segundo Curso</field>
+        </record>
+        <record model="open_academy.Course" id="demoCourse3">
+            <field name="name">Curso de demostración 3</field>
+            <field name="title">Tercer Curso</field>
+            <field name="description">Este es el tercer Curso</field>
+        </record>
+    </data>
 </odoo>
