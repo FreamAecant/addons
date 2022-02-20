@@ -14,3 +14,4 @@ class Course(models.Model):
     seats = fields.Integer(string='Number of seats')
     instructor = fields.Many2one('res.partner', ondelete='set null')
     course = fields.Many2one('open_academy.course', ondelete='set null')
+    attendees = fields.Many2many('res.partner')
